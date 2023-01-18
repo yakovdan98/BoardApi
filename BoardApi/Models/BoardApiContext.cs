@@ -15,14 +15,19 @@ namespace BoardApi.Models
     }
 
 
-    //SEEDING THE DATABASE
-    // protected override void OnModelCreating(ModelBuilder builder)
-    // {
-    //   builder.Entity<Group>()
-    //     .HasData(
-    //       new Group { GroupId = 1, Title = "Travel"}
-    //       new Group { GroupId = 2, Title = "Gardening"}
-    //     );
-    // }
+    
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
+      builder.Entity<Group>()
+        .HasData(
+          new Group { GroupId = 1, Title = "Travel"},
+          new Group { GroupId = 2, Title = "Gardening"}
+        );
+      builder.Entity<Message>()
+        .HasData(
+          new Message { MessageId = 1, Title = "Mexico", Body = "Test body Travel", Time = new DateTime (2023, 1, 17), GroupId = 1, RealName = "Johnny", PenName = "Jon"},
+          new Message { MessageId = 2, Title = "Flowers", Body = "Test body Gardening", Time = new DateTime (2023, 1, 15), GroupId = 2, RealName = "Christopher", PenName = "Chris"}
+        );
+    }
   }
 }
