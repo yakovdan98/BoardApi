@@ -1,11 +1,13 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using BoardApi.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BoardApi.Controllers
 {
   [Route("api/[controller]")]
   [ApiController]
+  [Authorize]
   public class GroupsController : ControllerBase
   {
     private readonly BoardApiContext _db;
@@ -43,3 +45,4 @@ namespace BoardApi.Controllers
 
   }
 }
+

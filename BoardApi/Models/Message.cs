@@ -8,7 +8,7 @@ public class Message
   public string Body { get; set; }
   public DateTime Time { get; set; }
   public int GroupId { get; set; }
-  public Group Group { get; set; }
+  public Group Group { get; }
   // public List<TagMessage> JoinEntities { get; set; }
   public string RealName { get; set; }
   public string PenName { get; set; }
