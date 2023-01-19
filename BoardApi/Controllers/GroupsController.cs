@@ -12,6 +12,7 @@ namespace BoardApi.Controllers
   {
     private readonly BoardApiContext _db;
 
+
     public GroupsController(BoardApiContext db)
     {
       _db = db;
